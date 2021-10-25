@@ -172,15 +172,31 @@ const calculateSum = function (a, b) {
   console.log(sum >= 50 || sum <= 80 ? `65` : `80`);
   return sum;
 };
-
 calculateSum(12, 15);
 /* 18. Create a function to convert a number (passed as a parameter) into a string, basing yourself on this example: 
     The number has 3 as a factor â‡’ return `Diego`
     The number has 5 as a factor â‡’ return `Riccardo`
     The number has 7 as a factor â‡’ return `Stefano`
     If the number does not have 3,5, or 7, return the original number. 
-    âš ï¸ The factor is an integer which evenly divides a number without leaving a remainder. One number can have more than one factor, in that case you should return both names. 
+    âš ï¸ The factor is an integer which evenly divides a number without leaving a remainder.
+     One number can have more than one factor, in that case you should return both names. 
 Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
-
+const convertNumber = function (num) {
+  let str = "";
+  if (num % 3 !== 0 && num % 5 !== 0 && num % 7 !== 0) {
+    return num;
+  }
+  if (num % 3 == 0) {
+    str += "Diego";
+  }
+  if (num % 5 == 0) {
+    str += "Riccardo";
+  }
+  if (num % 7 == 0) {
+    str += "Stefano";
+  }
+  return str;
+};
+console.log(convertNumber(45));
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
