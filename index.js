@@ -94,18 +94,14 @@ testArray1(arr1);
 /* 11. Create a function to find the longest string from a given array of strings. 
     Pass the array as parameter and return the longest string. */
 function longestString(str) {
-  // INCOMING PARAMETERS
   let longestStr = str.sort(function (a, b) {
     return b.length - a.length;
   });
   console.log(longestStr[0]);
-
   return longestStr[0];
 }
-
 const list = ["STRING1", "sdofijosidjfoa", "justanotherstringa very long one"];
-
-console.log(longestString(list)); // ARGUMENTS
+longestString(list);
 
 /* 12. Create a function to find the types of a given angle:
   1. Acute angle â‡’ between 0 and 90 degrees. Return `acute`.
@@ -115,7 +111,19 @@ console.log(longestString(list)); // ARGUMENTS
 
     Pass the angle as a parameter.
 */
-
+const angle = function (a) {
+  if (a >= 0 && a < 90) {
+    return console.log("acute");
+  } else if (a === 90) {
+    return console.log("right");
+  } else if (a > 90 && a < 180) {
+    return console.log("obtuse");
+  } else {
+    a === 180;
+    return console.log("straight");
+  }
+};
+angle(150);
 /* 13. Create a function to find and return the index of the greatest element of a given array of integers
  that you passed as a parameter. */
 const greatestElement = function (str) {
@@ -128,7 +136,13 @@ const greatestElement = function (str) {
 let numbers = [1, 2, 3, 4, 0];
 greatestElement(numbers);
 /* 14. Create a function to find and return the largest **even** number from an array of integers that is passed a parameter. */
-
+function largest_even(arra) {
+  arra.sort((x, y) => y - x);
+  for (var i = 0; i < arra.length; i++) {
+    if (arra[i] % 2 == 0) return arra[i];
+  }
+}
+console.log(largest_even([20, 40, 10, 60, 180, 5]));
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative. 
     Return `true` if that's the case, return `false` if it's not. */
 
