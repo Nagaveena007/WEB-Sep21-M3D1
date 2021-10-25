@@ -145,13 +145,35 @@ function largest_even(arra) {
 console.log(largest_even([20, 40, 10, 60, 180, 5]));
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative. 
     Return `true` if that's the case, return `false` if it's not. */
-
+const numberCheck = function (a, b) {
+  let result;
+  result = (a < 0 && b > 0) || (b < 0 && a > 0) ? true : false;
+  console.log(result);
+  return result;
+};
+numberCheck(1, 2);
 /* 16. Create a function to create and return a new string where the first 3 characters and in lower case and the others are in upper case. 
     If the string's length is less than 3, convert the whole string into uppercase. Pass the original string as a parameter. */
-
+const newString2 = function (str) {
+  if (str.length < 3) {
+    console.log(str.toUpperCase());
+    return str;
+  } else {
+    let newStr = str.slice(3).toUpperCase();
+    str = splice(1, 3);
+    return console.log(str.concat(newStr));
+  }
+};
+//newString2("my name is veena");
 /* 17. Create a function to calculate the sum of two integers (passed as parameters). 
     If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
+const calculateSum = function (a, b) {
+  let sum = a + b;
+  console.log(sum >= 50 || sum <= 80 ? `65` : `80`);
+  return sum;
+};
 
+calculateSum(12, 15);
 /* 18. Create a function to convert a number (passed as a parameter) into a string, basing yourself on this example: 
     The number has 3 as a factor â‡’ return `Diego`
     The number has 5 as a factor â‡’ return `Riccardo`
