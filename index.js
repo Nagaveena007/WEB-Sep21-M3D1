@@ -169,7 +169,7 @@ const newString2 = function (str) {
     If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
 const calculateSum = function (a, b) {
   let sum = a + b;
-  console.log(sum >= 50 || sum <= 80 ? `65` : `80`);
+  console.log(sum >= 50 || sum <= 80 ? `80` : `65`);
   return sum;
 };
 calculateSum(12, 15);
@@ -200,3 +200,15 @@ const convertNumber = function (num) {
 console.log(convertNumber(45));
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
+const acronym = function (str) {
+  let space = " ";
+  let phraseAcronym;
+  phraseAcronym += str[0];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === space) {
+      phraseAcronym += str[i + 1];
+    }
+  }
+  console.log(phraseAcronym.toUpperCase());
+};
+acronym("good morning");
