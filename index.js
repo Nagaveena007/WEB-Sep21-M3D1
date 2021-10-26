@@ -202,7 +202,7 @@ console.log(convertNumber(45));
 Ex. British Broadcasting Corporation returns `BBC` */
 const acronym = function (str) {
   let space = " ";
-  let phraseAcronym;
+  let phraseAcronym = "";
   phraseAcronym += str[0];
   for (let i = 0; i < str.length; i++) {
     if (str[i] === space) {
